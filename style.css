@@ -80,7 +80,7 @@ article {
 
 .extra {
 
-    padding-top: 30px;
+    padding-top: 15px;
 }
 .arrow {
     position: absolute;
@@ -97,7 +97,7 @@ article {
     margin-bottom: -80px;
     margin-right: 2px;
     font-family: Sketchit Means Sketchit;
-    font-size: 1.2em;
+    font-size: 1em;
     transform: rotate(5deg);
 }
 
