@@ -78,6 +78,31 @@ article {
     margin-top: 100px;
 } 
 
+.extra {
+
+    padding-top: 30px;
+}
+.arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -50px;
+    margin-right: 30px;
+}
+
+.arrow__text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -80px;
+    margin-right: 2px;
+    font-family: Sketchit Means Sketchit;
+    font-size: 1.2em;
+    transform: rotate(5deg);
+}
+
+
+
 .__tag {
     background-color: rgb(255, 255, 255);
     border: none;
