@@ -1,14 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
-    background-color: #553D33;
+
+
     color: white;      
     margin: 0 auto;
-    margin-left: 25px;
-    margin-right: 25px;
+    
 }
 
 h1 {
     font-family: Paralucent;
-    font-size: 2.4em;
+    font-size: 2em;
 }
 
 h2 {
@@ -18,15 +21,25 @@ h2 {
 
 h3 {
     font-family: Poppins;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
-p {
+p, a {
     font-family: 'Circular Std', sans-serif;
+    text-decoration: none;
+    color: white;
 }
 
 .brown {
     background-color: #553D33;
+   
+}
+
+.container {
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+    
 }
 
 header {
@@ -39,8 +52,8 @@ header {
 
     position: relative;
     display: flex;
-    left: 230px;
-    bottom: 70px;
+    left: 220px;
+    bottom: 60px;
 }
 
 header h1 {
@@ -55,3 +68,205 @@ header h3 {
 article {
     margin-top: 100px;
 } 
+
+.__tag {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #553D33;
+    font-weight: 500;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px 2px;
+    border-radius: 250px;
+  }
+
+
+  .under__line {
+    margin-left: 40px;
+    margin-top: -5px;
+    display: block;
+    padding-bottom: 50px;
+  }
+
+article a {
+    font-weight: bold;
+}
+.white {
+    color: #553D33;
+}
+
+.white p {
+    color: #262626;
+    margin-top: -10px;
+}
+
+.white h3 {
+    color: #262626;
+}
+
+.dot__scribble {
+    position: relative;
+    display: flex;
+    top: 23px;
+}
+
+.date__title {
+    margin-left: 36px;
+    margin-top: -10px;
+}
+
+section {
+    margin-top: 40px;
+}
+
+.experience {
+    margin-top: 100px;
+}
+
+.experience h4 {
+    color: #646464;
+    font-family: Circular Std;
+    font-weight: 500;
+}
+
+.experience h3 {
+    color: #262626;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.experience img {
+    top: 41px;
+}
+
+.experience p {
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #553D33;
+    height: 40px;
+    text-align: center;
+    padding-top: 45px;
+    margin-top: 50px;
+ }
+
+ .footer__text p {
+    color: white;
+    font-size: 0.8em;
+ }
+
+ section a {
+    color: #553D33;
+    font-weight: bold;
+ }
+
+
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.portfolio__btn {
+    display: flex;
+    position: fixed;
+    border-radius: 5px;
+    right: 0;
+    bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 18px;
+    visibility: hidden;
+    border: solid 2px #553D33;
+
+}
+
+.portfolio__btn a {
+    color: #553D33;
+    font-family: paralucent;
+    font-weight: bold;
+    padding: 12px 15px;
+    font-size: 1em;
+    
+}
+
+.buttons {
+    margin-top: 50px;
+    text-align: center;
+    display: none;
+}
+
+.about__btn {
+    position: relative;
+    background-color: white;
+    font-family: paralucent;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #553D33;
+    padding: 13px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.exp__btn {
+    position: relative;
+    background-color: white;
+    font-family: paralucent;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #553D33;
+    padding: 13px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.port__btn {
+    position: relative;
+    background-color: white;
+    font-family: paralucent;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #553D33;
+    padding: 13px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+
+@media only screen and (min-width : 1050px) {
+    .portfolio__btn {
+        visibility: visible;
+    }
+
+    .buttons {
+        display: block;
+    }
+
+    .space__unseen {
+        height: 162px;
+        width: 30px;
+    }
+
+    .space {
+        width: 40px;
+        margin-top: 50px;
+        height: 70px;
+        margin-bottom: -100px;
+
+    }
+    
+}

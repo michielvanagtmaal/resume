@@ -6,18 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Resume - Michiel van Agtmaal</title>
+
+    <script type="text/javascript">
+        function setNewImage() {
+            document.getElementById("me").src = "assets/online_me.png";
+        }
+
+        function setOldImage() {
+            document.getElementById("me").src = "assets/me.png";
+        }
+
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 50;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                
+            }
+        }
+    </script>
 </head>
-<body>
+<body id="top">
+    <div class="portfolio__btn">
+        <a href="#top">↑</a>
+    </div>
     <div class="brown">
+        <div class="container">
     <header>
         <div class="header__img">
-            <img class="pic__me" src="assets/me.png" width="50%" alt="picture of me">
-            <img class="pic__emojis" src="assets/emojis.png" width="33%" alt="emojis">
+            <img id="me" onmouseover="setNewImage()" onmouseout="setOldImage()" src="assets/me.png" width="40%">
+            <img class="pic__emojis" src="assets/emojis.png" width="28%" alt="emojis">
         </div>
             <h1>Michiel van Agtmaal</h1>
         <h3>UX SPECIALIST</h3>
-        <img src="assets/underline.png" width="13%" alt="underline">
+        <img src="assets/underline.png" width="10%" alt="underline">
     </header>
+
+    <div class="buttons">
+        <a class="about__btn" href="#about">😃 About me</a>
+        <a class="exp__btn" href="#experience">🧳 Experience</a>
+        <a class="port__btn" href="https://behance.net/m8x" target="_blank">Portfolio ➜</a>
+       
+
+    </div>
+    <div class="space__unseen">
+
+    </div>
+    <div class="space" id="about">
+
+    </div>
+<div class="about__me">
+    <div class="reveal">
+    
     <article>
         <h2>😃 About me</h2>
         <p>
@@ -37,6 +86,172 @@
         </p>
     
     </article>
+</div>
+</div>
+    <article class="reveal">
+        
+        <h2>💻 Daily tools</h2>
+        <div class="tools">
+            <img src="assets/tools.png" width="100%" alt="tools">
+        </div>
+    </article>
+    <article class="reveal">
+        <h2>🌎 Languages</h2>
+        <p> <span style="font-weight: bold;">Dutch</span>  - native language</p>
+        <p> <span style="font-weight: bold;">English</span>  - fluent</p>
+        <p> <span style="font-weight: bold;">French</span>  - good</p>
+    </article>
+
+
+        <article class="reveal">
+            <h2>🚀 Interests</h2>
+            <p class="__tag">fashion</p>
+            <p class="__tag">sneakers</p>
+            <p class="__tag">hip hop</p>
+            <p class="__tag">web3</p>
+            <p class="__tag">videogames</p>
+            <p class="__tag">traveling</p>
+            <p class="__tag">memes</p>
+        </article>
+
+        <article class="reveal">
+            <h2>✉️ Contact</h2>
+            <a href="mailto:michiel@huitfois.com?subject=Job interview" target="_blank">michiel@huitfois.com</a>
+            <p>+32 476 62 65 05</p>
+        </article>
+
+        <article class="reveal">
+            <h2>🎨 Portfolio</h2>
+            <a href="https://www.behance.net/m8x" target="_blank">behance.net/m8x</a>
+           
+            <img class="under__line" src="assets/underline.png" width="10%" alt="underline">
+        
+
+        </article>
     </div>
+</div>
+
+    <div class="white" id="experience">
+        <div class="container">
+        <section class="reveal">
+            <h2>📖 Education</h2>
+            <img class="dot__scribble" src="assets/scribble.png" width="4%" alt="scribble">
+            <div class="date__title">
+                <h3>2019 - 2023</h3>
+                <p>Bachelor Interactive Multimedia Design @ Thomas More, Mechelen</p>
+            </div>
+
+            <img class="dot__scribble" src="assets/scribble.png" width="4%" alt="scribble">
+            <div class="date__title">
+                <h3>2017 - 2019</h3>
+                <p>Multimedia @ Stedelijk Lyceum Cadix, Antwerp</p>
+            </div>
+
+            <img class="dot__scribble" src="assets/scribble.png" width="4%" alt="scribble">
+            <div class="date__title">
+                <h3>2013 - 2017</h3>
+                <p>Economy and modern languages @ Sint-Jozefinstituut, Essen</p>
+            </div>
+        </section>
+        <div class="experience">
+        <section class="reveal">
+            <h2>🧳 Experience</h2>
+            <div class="reveal">
+            <img class="dot__scribble" src="assets/scribble2.png" width="5%" alt="scribble">
+            <div class="date__title">
+                <h4>Sept. 2022 - Dec. 2022</h4>
+                <h3>Internship @ Camprea - UX Designer<h3>
+                    <p>
+                        Camprea builds an application for visitors and a dashboard for area operators that offer a very cost-effective solution to manage paid and free camper areas.
+                    </p>
+                    <p>
+                        During these 3 months my tasks were user research, design research, design the entire application, design the entire dashboard and redesign their website. I’m also doing the branding for the company.
+                    </p>
+                    <p>
+                        They allowed me to work from home but I went to the office once a week to know what it’s like to work at an office. We communicated in Dutch by using email, Whatsapp and Microsoft Teams.
+                    </p>
+                    <p>
+                         —                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <img class="dot__scribble" src="assets/scribble2.png" width="5%" alt="scribble">
+                 <div class="date__title">
+                <h4>July 2022 - ...</h4>
+                <h3>Freelancer @ Ebit - Motion Designer<h3>
+                    <p>
+                        A YouTuber named MattCS - with who I had worked with in the past - offered me to join the Ebit team as a motion designer. I didn’t have much to do during my summer holiday so I accepted the offer.
+                    </p>
+                    <p>
+                        Ebit is an online cryptocurrency casino that is still in beta version.
+                    </p>
+                    <p>
+                        My task was to animate social media posts such as giveaways and announcements. I also had to animate a lot of advertisement banners to put on websites and stream overlays. Sometimes I received tasks that had to be done within a few hours, but that didn’t really bother me. I am stress-resistant and know how to work efficiently.
+                    </p>
+                    <p>
+                        All the communication was in English using Discord and Notion. The Ukrainian graphic designer gave me Adobe Photoshop files for me to animate in Adobe After Effects.
+                    </p>
+                    <p>
+                        —
+                    </p>
+                </div>
+            </div>
+            <div class="reveal">
+
+                <img class="dot__scribble" src="assets/scribble2.png" width="5%" alt="scribble">
+                 <div class="date__title">
+                <h4>Apr. 2022 - June 2022</h4>
+                <h3>Freelancer @ FrogPartyNFT - Motion Designer<h3>
+                    <p>
+                        I was really interested in web3 and wanted to get more into it so I thought the best way to learn is to be part of a community. In November 2021 I bought my first NFT. This Solana NFT was part of the FrogParty collection which was founded by a YouTuber I worked with in the past. I was really active in their Discord and learnt a lot about the space.
+                    </p>
+                    <p>
+A couple months later the founder asked me to join their international, online team as a Motion Designer. I had to work together with a graphic designer from Ukraine and together we worked on social media posts. The designer gave me Adobe Photoshop and Figma files to animate in Adobe After Effects.
+                    </p>
+                    <p>
+                        —
+                    </p>
+                </div>
+            </div>
+            <div class="reveal">
+                <img class="dot__scribble" src="assets/scribble2.png" width="5%" alt="scribble">
+                <div class="date__title">
+               <h4>Sept. 2021 - June 2022</h4>
+               <h3>School project: Gruppo - UX Design<h3>
+                   <p>
+                    This school year was my third year studying ‘interactive multimedia design’ so during this year I got a big assignment related to UX design.
+                   </p>
+                   <p>
+                    I have learned a lot about UX design during this year because of my thesis ‘Gruppo’, which you can find on my portfolio. At the end of the year, I had to present this project for recruiters so everything had to be perfect.
+                   </p>
+                   <p>
+                       —
+                   </p>
+               </div>
+            </div>
+            <div class="reveal">
+               <img class="dot__scribble" src="assets/scribble2.png" width="5%" alt="scribble">
+                <div class="date__title">
+               <h4>...</h4>
+               <h3>Hundreds of 5 star reviews in 15+ countries <h3>
+                   <p>
+                    Ever since I got my own laptop, I started doing online client work. I have already worked with over 100 people from all over the world. Graphic design, web design, video editing, logo animations and other motion design. I have done it all. I got in contact with my clients through Fiverr or by me reaching out to them.
+                   </p>
+                   <p>
+                    I have done many school and personal projects which you can find on <a href="https://www.behance.net/m8x">my portfolio </a>.
+                   </p>
+               </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+    <footer class="footer__text">
+        <p>
+            🕊 Copyright © 2022. — Michiel van Agtmaal
+        </p>
+    </footer>
 </body>
 </html>
