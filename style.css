@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 h1 {
@@ -218,7 +218,8 @@ footer {
     position: relative;
     background-color: white;
     font-family: paralucent;
-    margin-right: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
     font-weight: bold;
     font-size: 1em;
     color: #553D33;
@@ -232,7 +233,8 @@ footer {
     position: relative;
     background-color: white;
     font-family: paralucent;
-    margin-left: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
     font-weight: bold;
     font-size: 1em;
     color: #553D33;
@@ -245,7 +247,8 @@ footer {
     position: relative;
     background-color: white;
     font-family: paralucent;
-    margin-left: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
     font-weight: bold;
     font-size: 1em;
     color: #553D33;
