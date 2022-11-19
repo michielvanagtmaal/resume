@@ -28,12 +28,26 @@ html {
 }
 body {
 
-
     color: white;      
     margin: 0 auto;
+    overflow-x: hidden;
 
     
 }
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -45,9 +59,16 @@ body {
       }
   }
 
-  .buttons a {
-    font-family: 'Paralucent';
+  @keyframes slide-right {
+    0% {
+              left: 0%;
+    }
+    100% {
+                left: 100%;
+                
+    }
   }
+
 
 
 
@@ -56,6 +77,8 @@ a {
     transition: all .2s ease-in-out;
     display: inline-block;
 }
+
+
 
 a:hover {
     transform: scale(1.03);
@@ -76,16 +99,36 @@ h3 {
     font-size: 0.9em;
 }
 
-p, a {
+p {
     font-family: 'Circular Std', sans-serif;
+    
+}
+
+a {
     text-decoration: none;
     color: white;
 }
 
+
+
+
 .brown {
-    background-color: #553D33;
+    background: linear-gradient(-45deg, #00052B, #00052B, #00052B, #110040,#110040 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    
    
 }
+
+.slider {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    animation: slide-right 1s cubic-bezier(0.770, 0.000, 0.175, 1.000) both;
+}
+
 
 .container {
     max-width: 450px;
@@ -103,8 +146,9 @@ header {
 
 .pic__me {
     opacity: 0;
-    animation: fade-in 1s ease;
+    animation: fade-in 0.75s ease;
     animation-fill-mode: forwards;
+    animation-delay: 0.5s;
 }
 
 
@@ -116,8 +160,8 @@ header {
     left: 220px;
     bottom: 60px;
     opacity: 0;
-    animation: fade-in 1s ease;
-    animation-delay: 0.25s;
+    animation: fade-in 0.75s ease;
+    animation-delay: 0.75s;
     animation-fill-mode: forwards;
 }
 
@@ -126,7 +170,7 @@ header h1 {
     margin-bottom: 0px;
     opacity: 0;
     animation: fade-in 1s ease;
-    animation-delay: 0.5s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     
 }
@@ -134,15 +178,15 @@ header h1 {
 header h3 {
     margin-bottom: -10px;
     opacity: 0;
-    animation: fade-in 1s ease;
-    animation-delay: 0.75s;
+    animation: fade-in 0.75s ease;
+    animation-delay: 1.25s;
     animation-fill-mode: forwards;
 }
 
 .line {
     opacity: 0;
     animation: fade-in 0.5s ease;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -178,8 +222,7 @@ article {
 .__tag {
     background-color: rgb(255, 255, 255);
     border: none;
-    color: #553D33;
-    font-weight: 500;
+    color: #00052B;
     padding: 5px 20px;
     text-align: center;
     text-decoration: none;
@@ -196,6 +239,31 @@ article {
     padding-bottom: 50px;
   }
 
+
+  .circle {
+    display: block;
+    margin: auto;
+    margin-top: -18px;
+    opacity: 100%;
+    animation: breathe 1s ease-in-out infinite alternate;
+  }
+
+
+  @keyframes breathe {
+
+    0% {
+      transform: scale(1.1);
+      opacity: 40%;
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 80%;
+    }
+    
+  }
 article a {
     font-family: 'Circular Bold', sans-serif;
     font-weight: bold;
@@ -205,7 +273,7 @@ article a {
     font-family: 'Circular Bold', sans-serif;
 }
 .white {
-    color: #553D33;
+    color: #00052B
 }
 
 .white p {
@@ -214,7 +282,7 @@ article a {
 }
 
 .white h3 {
-    color: #262626;
+    color: #00052B;
 }
 
 .dot__scribble {
@@ -238,7 +306,7 @@ section {
 
 .experience h4 {
     color: #646464;
-    font-family: Circular Std, sans-serif;
+    font-family: 'Circular Std', sans-serif;
     font-weight: 500;
 }
 
@@ -257,11 +325,15 @@ section {
     margin-top: 20px;
 }
 
+
+
 footer {
-    background-color: #553D33;
+    background: linear-gradient(-45deg, #00052B, #00052B, #00052B, #110040,#110040 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     height: 40px;
     text-align: center;
-    padding-top: 45px;
+    padding-top: 40px;
     margin-top: 50px;
  }
 
@@ -271,7 +343,7 @@ footer {
  }
 
  section a {
-    color: #553D33;
+    color: #00052B;
     font-weight: bold;
  }
 
@@ -297,17 +369,49 @@ footer {
     margin-right: 30px;
     margin-bottom: 18px;
     visibility: hidden;
-    border: solid 2px #553D33;
+    opacity: 0;
+    animation: fade-in 0.75s ease forwards, gradient 10s ease infinite;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    transform: scale(1);
+    background: linear-gradient(-45deg, #c868ee, #ff7190, #5364ff, #51ff91);
+	background-size: 400% 400%;
 
 }
 
 .portfolio__btn a {
-    color: #553D33;
+    color: white;
     font-family: 'Paralucent', sans-serif;
     font-weight: bold;
     padding: 12px 15px;
     font-size: 1em;
     
+}
+
+.cta {
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+.work__btn {
+    position: relative;
+    background-color: white;
+    font-family: 'Paralucent', sans-serif;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 1.2em;
+    color: #ffffff;
+    padding: 15px 15px;
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: gradient 5s ease infinite;
+    animation-fill-mode: forwards;
+    transform: scale(1);
+    background: linear-gradient(-450deg, #c868ee, #ff7190, #5364ff, #51ff91);
+	background-size: 400% 400%;
+    z-index: 1;
+
 }
 
 .buttons {
@@ -318,13 +422,17 @@ footer {
 
 
 
+
+
+
 .about__btn {
     position: relative;
     background-color: white;
+    font-family: 'Paralucent', sans-serif;
     margin-right: 2px;
     margin-left: 2px;
     font-size: 1em;
-    color: #553D33;
+    color: #00052B;
     padding: 13px 15px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -338,15 +446,16 @@ footer {
 
 
 
+
+
 .exp__btn {
     position: relative;
     background-color: white;
-    font-family: 'Paralucent' sans-serif;
+    font-family: 'Paralucent', sans-serif;
     margin-right: 2px;
     margin-left: 2px;
-    font-weight: bold;
     font-size: 1em;
-    color: #553D33;
+    color: #00052B;
     padding: 13px 15px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -360,12 +469,11 @@ footer {
 .port__btn {
     position: relative;
     background-color: white;
-    font-family: 'Paralucent' sans-serif;
+    font-family: 'Paralucent', sans-serif;
     margin-right: 2px;
     margin-left: 2px;
-    font-weight: bold;
     font-size: 1em;
-    color: #553D33;
+    color: #00052B;
     padding: 13px 15px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
