@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Michiel van Agtmaal</title>
@@ -33,6 +36,9 @@
                 if (revealtop < windowheight - revealpoint) {
                     reveals[i].classList.add('active');
                 }
+                else {
+                    reveals[i].classList.remove('active');
+                }
                 
             }
         }
@@ -46,12 +52,12 @@
         <div class="container">
     <header>
         <div class="header__img">
-            <img draggable="false" id="me" onmouseover="setNewImage()" onmouseout="setOldImage()" src="assets/me.png" width="40%">
+            <img draggable="false" class="pic__me" id="me" onmouseover="setNewImage()" onmouseout="setOldImage()" src="assets/me.png" width="40%">
             <img draggable="false" class="pic__emojis" src="assets/emojis.png" width="28%" alt="emojis">
         </div>
             <h1>Michiel van Agtmaal</h1>
         <h3>UX SPECIALIST</h3>
-        <img draggable="false" src="assets/underline.png" width="10%" alt="underline">
+        <img draggable="false" class="line" src="assets/underline.png" width="10%" alt="underline">
     </header>
 
     <div class="buttons">
@@ -97,16 +103,16 @@
         <div class="tools">
             <img draggable="false" src="assets/tools.png" width="100%" alt="tools">
         </div>
-        <div class="extra">
-        <img class="arrow" src="assets/arrow.png" width="5%" alt="arrow">
+        <div class="extra reveal">
+        <img draggable="false" class="arrow" src="assets/arrow.png" width="5%" alt="arrow">
         <p class="arrow__text">always learning</p>
     </div>
     </article>
     <article class="reveal">
         <h2>🌎 Languages</h2>
-        <p> <span style="font-weight: bold;">Dutch</span>  - native language</p>
-        <p> <span style="font-weight: bold;">English</span>  - fluent</p>
-        <p> <span style="font-weight: bold;">French</span>  - good</p>
+        <p> <span class="bold">Dutch</span>  - native language</p>
+        <p> <span class="bold">English</span>  - fluent</p>
+        <p> <span class="bold">French</span>  - good</p>
     </article>
 
 
@@ -142,6 +148,7 @@
         <div class="container">
         <section class="reveal">
             <h2>📖 Education</h2>
+            <div class="reveal">
             <img draggable="false" class="dot__scribble" src="assets/scribble.png" width="4%" alt="scribble">
             <div class="date__title">
                 <h3>2019 - 2023</h3>
@@ -159,6 +166,7 @@
                 <h3>2013 - 2017</h3>
                 <p>Economy and modern languages @ Sint-Jozefinstituut, Essen</p>
             </div>
+        </div>
         </section>
         <div class="experience">
         <section class="reveal">
@@ -247,7 +255,7 @@ A couple months later the founder asked me to join their international, online t
                     Ever since I got my own laptop, I started doing online client work. I have already worked with over 100 people from all over the world. Graphic design, web design, video editing, logo animations and other motion design. I have done it all. I got in contact with my clients through Fiverr or by me reaching out to them.
                    </p>
                    <p>
-                    I have done many school and personal projects which you can find on <a href="https://www.behance.net/m8x">my portfolio </a>.
+                    I have done many school and personal projects which you can find on <a class="bold" href="https://www.behance.net/m8x">my portfolio </a>.
                    </p>
                </div>
             </div>

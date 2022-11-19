@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: url(fonts/CircularStd-Book.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Paralucent';
+    src: url(fonts/Paralucent-DemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Circular Bold';
+    src: url(fonts/FontsFree-Net-CircularStd-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Sketchit Means Sketchit';
+    src: url(fonts/SketchitMeansSketchit-85o2.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins-Bold.ttf) format('truetype');
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,8 +31,26 @@ body {
 
     color: white;      
     margin: 0 auto;
+
     
 }
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+  .buttons a {
+    font-family: 'Paralucent';
+  }
+
+
+
 
 a {
     transition: all .2s ease-in-out;
@@ -19,17 +62,17 @@ a:hover {
 }
 
 h1 {
-    font-family: Paralucent;
+    font-family: 'Paralucent', sans-serif;
     font-size: 2em;
 }
 
 h2 {
-    font-family: Paralucent;
+    font-family: 'Paralucent', sans-serif;
     font-size: 1.8em;
 }
 
 h3 {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
 }
 
@@ -51,10 +94,19 @@ p, a {
     
 }
 
+
+
 header {
     margin-top: 125px;
     text-align: center;
 }
+
+.pic__me {
+    opacity: 0;
+    animation: fade-in 1s ease;
+    animation-fill-mode: forwards;
+}
+
 
 
 .pic__emojis {
@@ -63,15 +115,35 @@ header {
     display: flex;
     left: 220px;
     bottom: 60px;
+    opacity: 0;
+    animation: fade-in 1s ease;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
 }
 
 header h1 {
     margin-top: -20px;
     margin-bottom: 0px;
+    opacity: 0;
+    animation: fade-in 1s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    
 }
 
 header h3 {
     margin-bottom: -10px;
+    opacity: 0;
+    animation: fade-in 1s ease;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+.line {
+    opacity: 0;
+    animation: fade-in 0.5s ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
 article {
@@ -96,7 +168,7 @@ article {
     bottom: 0;
     margin-bottom: -80px;
     margin-right: 2px;
-    font-family: Sketchit Means Sketchit;
+    font-family: 'Sketchit Means Sketchit', sans-serif;
     font-size: 1em;
     transform: rotate(5deg);
 }
@@ -125,7 +197,12 @@ article {
   }
 
 article a {
+    font-family: 'Circular Bold', sans-serif;
     font-weight: bold;
+}
+
+.bold {
+    font-family: 'Circular Bold', sans-serif;
 }
 .white {
     color: #553D33;
@@ -161,7 +238,7 @@ section {
 
 .experience h4 {
     color: #646464;
-    font-family: Circular Std;
+    font-family: Circular Std, sans-serif;
     font-weight: 500;
 }
 
@@ -226,7 +303,7 @@ footer {
 
 .portfolio__btn a {
     color: #553D33;
-    font-family: paralucent;
+    font-family: 'Paralucent', sans-serif;
     font-weight: bold;
     padding: 12px 15px;
     font-size: 1em;
@@ -239,25 +316,32 @@ footer {
     display: none;
 }
 
+
+
 .about__btn {
     position: relative;
     background-color: white;
-    font-family: paralucent;
     margin-right: 2px;
     margin-left: 2px;
-    font-weight: bold;
     font-size: 1em;
     color: #553D33;
     padding: 13px 15px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    animation: fade-in 0.75s ease;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    transform: scale(1);
 }
+
+
 
 
 .exp__btn {
     position: relative;
     background-color: white;
-    font-family: paralucent;
+    font-family: 'Paralucent' sans-serif;
     margin-right: 2px;
     margin-left: 2px;
     font-weight: bold;
@@ -266,12 +350,17 @@ footer {
     padding: 13px 15px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    animation: fade-in 0.75s ease;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    transform: scale(1);
 }
 
 .port__btn {
     position: relative;
     background-color: white;
-    font-family: paralucent;
+    font-family: 'Paralucent' sans-serif;
     margin-right: 2px;
     margin-left: 2px;
     font-weight: bold;
@@ -280,6 +369,11 @@ footer {
     padding: 13px 15px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    animation: fade-in 0.75s ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transform: scale(1);
 }
 
 
