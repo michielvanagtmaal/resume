@@ -510,9 +510,10 @@ footer {
     
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 400px) {
     .pic__emojis {
-        left: 170px;
+        left: 155px;
         bottom: 50px;
+        
     }
 }
